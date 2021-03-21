@@ -1,15 +1,23 @@
 {
   "name": "fitrition",
   "version": "0.0.0",
+  "private": true,
+  "publisher": "Fitrition LLC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fitrition/fitrition.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Fitrition/fitrition/issues"
+  },
   "scripts": {
+    "build": "ng build",
+    "e2e": "ng e2e",
+    "lint": "ng lint",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "test": "ng test"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~11.2.6",
     "@angular/common": "~11.2.6",

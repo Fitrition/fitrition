@@ -1,3 +1,5 @@
+@import 'normalize.css/normalize.css';
+
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
@@ -39,6 +41,7 @@ $fitrition-site-theme: mat-light-theme(
 html,
 body {
   height: 100%;
+  background-color: #f9f9f9;
 }
 body {
   margin: 0;

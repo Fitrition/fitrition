@@ -1,0 +1,15 @@
+.construction-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > div {
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: 200;
+  }
+
+  mat-spinner {
+    margin-top: 2rem;
+  }
+}

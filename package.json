@@ -13,7 +13,7 @@
   "scripts": {
     "build": "ng build",
     "build:prod": "ng build --aot --prod && yarn build:server",
-    "build:server": "tsc server.ts --outDir dist/",
+    "build:server": "tsc app-server.ts --outDir dist/",
     "ci": "yarn lint:all && yarn test:all && yarn e2e:all",
     "dev": "ng serve",
     "e2e": "ng e2e",
@@ -24,7 +24,7 @@
     "lint:all": "yarn lint",
     "ng": "ng",
     "release": "standard-version",
-    "start": "node dist/server.js",
+    "start": "node dist/app-server.js",
     "test": "yarn test:headless",
     "test:all": "yarn test",
     "test:chrome": "ng test --code-coverage --browsers=Chrome --watch=false",

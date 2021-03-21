@@ -5,4 +5,4 @@ addons:
   chrome: stable
 script:
   - yarn ci
-  - yarn build:prod
+  - yarn build

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { PureCssLoadingModule } from 'angular-pure-css-loaders';
 
 import { ConstructionZoneComponent } from './construction-zone.component';
 
@@ -9,7 +9,7 @@ describe('ConstructionZoneComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MatProgressSpinnerModule],
+      imports: [PureCssLoadingModule],
       declarations: [ConstructionZoneComponent],
     }).compileComponents();
   });

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { PureCssLoadingModule } from 'angular-pure-css-loaders';
 
 import { ConstructionZoneComponent } from '../construction-zone/construction-zone.component';
 import { FooterComponent } from '../footer/footer.component';
@@ -13,7 +13,7 @@ describe('LayoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MatToolbarModule, MatProgressSpinnerModule],
+      imports: [MatToolbarModule, PureCssLoadingModule],
       declarations: [
         LayoutComponent,
         HeaderComponent,

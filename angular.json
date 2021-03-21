@@ -100,15 +100,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/fitrition-site/tsconfig.app.json",
-              "projects/fitrition-site/tsconfig.spec.json",
-              "projects/fitrition-site/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/fitrition-site/**/*.ts",
+              "projects/fitrition-site/**/*.html"
             ]
           }
         },

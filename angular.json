@@ -30,9 +30,7 @@
               "projects/fitrition-site/src/favicon.ico",
               "projects/fitrition-site/src/assets"
             ],
-            "styles": [
-              "projects/fitrition-site/src/styles.scss"
-            ],
+            "styles": ["projects/fitrition-site/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -93,9 +91,7 @@
               "projects/fitrition-site/src/favicon.ico",
               "projects/fitrition-site/src/assets"
             ],
-            "styles": [
-              "projects/fitrition-site/src/styles.scss"
-            ],
+            "styles": ["projects/fitrition-site/src/styles.scss"],
             "scripts": []
           }
         },

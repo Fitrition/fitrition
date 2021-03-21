@@ -3,5 +3,129 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "fitrition-site": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/fitrition-site",
+      "sourceRoot": "projects/fitrition-site/src",
+      "prefix": "fts",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/fitrition-site",
+            "index": "projects/fitrition-site/src/index.html",
+            "main": "projects/fitrition-site/src/main.ts",
+            "polyfills": "projects/fitrition-site/src/polyfills.ts",
+            "tsConfig": "projects/fitrition-site/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/fitrition-site/src/favicon.ico",
+              "projects/fitrition-site/src/assets"
+            ],
+            "styles": [
+              "projects/fitrition-site/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/fitrition-site/src/environments/environment.ts",
+                  "with": "projects/fitrition-site/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "fitrition-site:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "fitrition-site:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "fitrition-site:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/fitrition-site/src/test.ts",
+            "polyfills": "projects/fitrition-site/src/polyfills.ts",
+            "tsConfig": "projects/fitrition-site/tsconfig.spec.json",
+            "karmaConfig": "projects/fitrition-site/karma.conf.js",
+            "assets": [
+              "projects/fitrition-site/src/favicon.ico",
+              "projects/fitrition-site/src/assets"
+            ],
+            "styles": [
+              "projects/fitrition-site/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/fitrition-site/tsconfig.app.json",
+              "projects/fitrition-site/tsconfig.spec.json",
+              "projects/fitrition-site/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/fitrition-site/e2e/protractor.conf.js",
+            "devServerTarget": "fitrition-site:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "fitrition-site:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "fitrition-site"
 }

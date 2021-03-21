@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { PureCssLoadingModule } from 'angular-pure-css-loaders';
 
 // Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -33,6 +34,7 @@ import { FooterComponent } from './footer/footer.component';
     RouterModule,
     MatToolbarModule,
     MatProgressSpinnerModule,
+    PureCssLoadingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

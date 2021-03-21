@@ -6,6 +6,13 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "paths": {
+      "fitrition": ["dist/fitrition/fitrition", "dist/fitrition"],
+      "fitrition-core": [
+        "dist/fitrition-core/fitrition-core",
+        "dist/fitrition-core"
+      ]
+    },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,

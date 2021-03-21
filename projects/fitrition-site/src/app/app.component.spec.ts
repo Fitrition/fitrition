@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterTestingModule } from '@angular/router/testing';
+import { PureCssLoadingModule } from 'angular-pure-css-loaders';
 
 import { AppComponent } from './app.component';
 import { ConstructionZoneComponent } from './construction-zone/construction-zone.component';
@@ -12,11 +12,7 @@ import { LayoutComponent } from './layout/layout.component';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-        MatToolbarModule,
-        MatProgressSpinnerModule,
-      ],
+      imports: [RouterTestingModule, MatToolbarModule, PureCssLoadingModule],
       declarations: [
         AppComponent,
         LayoutComponent,

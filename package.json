@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build": "ng build",
+    "build:prod": "ng build --aot --prod",
     "ci": "yarn lint:all && yarn test:all && yarn e2e:all",
     "e2e": "ng e2e",
     "e2e:all": "yarn e2e:fts:headless",
